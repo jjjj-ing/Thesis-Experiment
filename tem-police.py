@@ -131,8 +131,8 @@ def process_images_stream(input_folder, output_folder, user_questions):
         print(f"Original Image: {mse_info['image_name']}, MSE: {mse_info['mse']}")
 
 # 输入文件夹路径
-input_folder = 'D:\\vene\\exp\\input'  # 替换为你的图像文件夹路径
-output_folder = 'D:\\vene\\exp\\output\\police'  # 替换为你的输出文件夹路径
+input_folder = 'D:\\vene\\exp\\input'  # 
+output_folder = 'D:\\vene\\exp\\output\\police'  
 os.makedirs(output_folder, exist_ok=True)
 
 # 将用户问题分成多个较小的部分
