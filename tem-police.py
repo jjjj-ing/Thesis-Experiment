@@ -19,7 +19,7 @@ def image_description_stream(image, user_questions, output_description_path):
     # 使用 StringIO 来代替文件写入
     description_stream = io.StringIO()
 
-    # 对每个用户问题进行描述生成
+    # 对每个问题进行描述生成
     for idx, user_text in enumerate(user_questions):
         # 生成对话模板并创建提示
         prompt = f"<|user|>\n<image>\n{user_text}<|end|>\n<|assistant|>\n"
@@ -135,7 +135,7 @@ input_folder = 'D:\\vene\\exp\\input'  #
 output_folder = 'D:\\vene\\exp\\output\\police'  
 os.makedirs(output_folder, exist_ok=True)
 
-# 将用户问题分成多个较小的部分
+# 将问题分成多个较小的部分
 user_questions = [
     "What was the time, location, weather conditions, and number and type of vehicles involved in the accident? What were the positions and directions of the vehicles involved? What were their relative positions? Were there any brake marks or other signs of emergency braking at the scene? Were there any injuries or damage to other public facilities?"
 ]
