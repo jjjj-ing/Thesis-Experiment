@@ -19,7 +19,7 @@ def image_description_stream(image, user_questions, output_description_path):
     # 使用 StringIO 来代替文件写入
     description_stream = io.StringIO()
 
-    # 对每个用户问题进行描述生成
+    # 对每个问题进行描述生成
     for idx, user_text in enumerate(user_questions):
         # 生成对话模板并创建提示
         prompt = f"<|user|>\n<image>\n{user_text}<|end|>\n<|assistant|>\n"
@@ -132,11 +132,11 @@ def process_images_stream(input_folder, output_folder, user_questions):
         print(f"Original Image: {mse_info['image_name']}, MSE: {mse_info['mse']}")
 
 # 输入文件夹路径
-input_folder = 'D:\\vene\\exp\\input'  # 替换为你的图像文件夹路径
-output_folder = 'D:\\vene\\exp\\output\\long'  # 替换为你的输出文件夹路径
+input_folder = 'D:\\vene\\exp\\input'  
+output_folder = 'D:\\vene\\exp\\output\\long'  
 os.makedirs(output_folder, exist_ok=True)
 
-# 将用户问题分成多个较小的部分
+# 将问题分成多个较小的部分
 user_questions = [
     "Describe the color, model, and time of the accident.",
     "Describe the casualties and road facility damage caused by the accident.",
